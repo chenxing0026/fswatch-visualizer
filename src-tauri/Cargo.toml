@@ -1,0 +1,29 @@
+[package]
+name = "fswatch_visualizer"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "fswatch_visualizer"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fswatch-visualizer"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+notify = "6"
+globset = "0.4"
+rusqlite = { version = "0.32", features = ["bundled"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+crossbeam-channel = "0.5"
+csv = "1"
+open = "5"
+
